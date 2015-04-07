@@ -78,7 +78,7 @@
         <div class="row">
             <select class="form-control col-xs-12" ng-model="ordenarPor" >
                 <option value="nick" selected>Nombre</option>
-                <option value="squadNumber">Número</option>
+                <option value='squadNumber*1'>Número</option>
                 <option value="role">Posición</option>
             </select>
         </div>
@@ -92,8 +92,9 @@
         </div>
         <div class="row">
             <select class="form-control" ng-model="orden">
-                <option value="false" selected>Ascendente</option>
-                <option value="true">Descendente</option>
+            <option value="true" selected>Descendente</option>
+                <option value="false" >Ascendente</option>
+                
             </select>
         </div>
     </div>
@@ -107,9 +108,9 @@
             <thead>
                 <tr>
                     <th class="col-xs-1">Foto</th>
-                    <th class="col-xs-1">Número</th>
-                    <th class="col-xs-4">Nombre</th>
-                    <th class="col-xs-2">Posicion</th>
+                    <th class="col-xs-1"><a href="" ng-click="ordenarPor = 'squadNumber*1'; orden = !orden">Número</a></th>
+                    <th class="col-xs-4"><a href="" ng-click="ordenarPor = 'nick'; orden = !orden">Nombre</a></th>
+                    <th class="col-xs-2"><a href="" ng-click="ordenarPor = 'role'; orden = !orden">Posición</a></th>
 
                 </tr>
             </thead>

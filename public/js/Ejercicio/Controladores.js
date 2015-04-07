@@ -1,5 +1,6 @@
 ﻿var miAppControllers = angular.module('miAppControllers', []);
 
+//COMPETICION
 
 miAppControllers.controller('ControladorCompeticion', function ($scope, $http) {
 
@@ -7,7 +8,7 @@ miAppControllers.controller('ControladorCompeticion', function ($scope, $http) {
   $scope.competicion = competicion;
 });
 
-
+//LIGA
 
 miAppControllers.controller('ControladorLiga', ['$scope', '$routeParams', '$http',
   function ($scope, $routeParams, $http) {
@@ -36,11 +37,10 @@ miAppControllers.controller('ControladorLiga', ['$scope', '$routeParams', '$http
               //Controlar el error
             });
 
-
-
-
-
   }]);
+
+
+//PLANTILLA
 
 miAppControllers.controller('ControladorLista', ['$scope', '$routeParams', '$http',
   function ($scope, $routeParams, $http) {
@@ -61,6 +61,7 @@ miAppControllers.controller('ControladorLista', ['$scope', '$routeParams', '$htt
       var grupo = data.team.category.group_code;
 
 
+
           //Para saber el id de la liga y poner el enlace de equipo en el menu
 
           $.each(competicion.competicion, function (i, item) {
@@ -75,6 +76,8 @@ miAppControllers.controller('ControladorLista', ['$scope', '$routeParams', '$htt
         });
 
       }]);
+
+//DETALLE
 
 miAppControllers.controller('ControladorDetalle', ['$scope', '$routeParams', '$http', '$location', '$anchorScroll',
   function ($scope, $routeParams, $http, $location, $anchorScroll) {
@@ -136,7 +139,5 @@ miAppControllers.controller('ControladorDetalle', ['$scope', '$routeParams', '$h
           console.log(data);
         });
       }]);
-
-
 
 

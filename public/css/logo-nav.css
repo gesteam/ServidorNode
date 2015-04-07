@@ -209,4 +209,19 @@ thead{
     background-color: white;
 }
 
+table a
+{
+    display:block;
+    text-decoration:underline;;
+}
 
+ thead > tr > th > a
+{
+    display:block;
+    text-decoration:underline;
+    color:blue;
+}
+
+ thead > tr > th > a:visited{
+    color:blue;
+}
