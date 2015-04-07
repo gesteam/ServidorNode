@@ -21,6 +21,9 @@ miApp.config(['$routeProvider',
             templateUrl: '/Js/Ejercicio/partials/detalle.html',
             controller: 'ControladorDetalle'
         }).
+        when('/competicion.json', {
+            templateUrl: '/Recursos/competicion.json'
+        }).
         otherwise({
             redirectTo: '/'
         });
