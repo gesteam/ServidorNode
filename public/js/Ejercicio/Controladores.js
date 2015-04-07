@@ -65,7 +65,7 @@ miAppControllers.controller('ControladorLista', ['$scope', '$routeParams', '$htt
 
 
           //Para saber el id de la liga y poner el enlace de equipo en el menu
-          $http.get('Recursos/competicion.json').success(function (data) {
+          $http.get('../../Recursos/competicion.json').success(function (data) {
               
 
              $.each(data.competicion, function (i, item) {
@@ -138,7 +138,7 @@ miAppControllers.controller('ControladorDetalle', ['$scope', '$routeParams', '$h
 
 
           //Para saber el id de la liga y poner el enlace de equipo en el menu
-          $http.get('Recursos/competicion.json').success(function (data) {
+          $http.get('../../Recursos/competicion.json').success(function (data) {
 
               $.each(data.competicion, function (i, item) {
 
