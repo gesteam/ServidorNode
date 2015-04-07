@@ -3,14 +3,8 @@
 
 miAppControllers.controller('ControladorCompeticion', function ($scope, $http) {
 
-    $http.get('Recursos/competicion.json').success(function (data) {
-        $scope.competicion = data;
-    }).error(function (data, status, headers, config) {
-        //Controlar el error
-    });
 
-
-
+  $scope.competicion = competicion;
 });
 
 
@@ -19,32 +13,30 @@ miAppControllers.controller('ControladorLiga', ['$scope', '$routeParams', '$http
   function ($scope, $routeParams, $http) {
 
 
-      $http.get('Recursos/competicion.json').success(function (data) {
-          var liga;
-          var grupo;
 
-          $scope.competicion = data;
+    var liga;
+    var grupo;
 
-          var id = $routeParams.id;
-          $scope.id = id;
-  
-          $.each(data.competicion, function (i, item) {
+    $scope.competicion = competicion;
 
-              if (item.id == id) {
-                  liga = item.liga;
-                  grupo = item.grupo;
-              }
-          });
+    var id = $routeParams.id;
+    $scope.id = id;
 
-          $http.get('http://apiangularua.azurewebsites.net/liga?liga=' + liga + '&grupo=' + grupo).success(function (data) {
-              $scope.liga = data;
-          }).error(function (data, status, headers, config) {
+    $.each(competicion.competicion, function (i, item) {
+
+      if (item.id == id) {
+        liga = item.liga;
+        grupo = item.grupo;
+      }
+    });
+
+    $http.get('http://apiangularua.azurewebsites.net/liga?liga=' + liga + '&grupo=' + grupo).success(function (data) {
+      $scope.liga = data;
+    }).error(function (data, status, headers, config) {
               //Controlar el error
-          });
+            });
 
-      }).error(function (data, status, headers, config) {
-          //Controlar el error
-      });
+
 
 
 
@@ -53,83 +45,76 @@ miAppControllers.controller('ControladorLiga', ['$scope', '$routeParams', '$http
 miAppControllers.controller('ControladorLista', ['$scope', '$routeParams', '$http',
   function ($scope, $routeParams, $http) {
 
-      $http.get('http://apiangularua.azurewebsites.net/equipo?id=' + $routeParams.id).success(function (data) {
+    $http.get('http://apiangularua.azurewebsites.net/equipo?id=' + $routeParams.id).success(function (data) {
 
-          $scope.id = $routeParams.id;
+      $scope.id = $routeParams.id;
 
-          $scope.jugadores = data;
-         
+      $scope.jugadores = data;
 
-          var liga = data.team.category.category_id;
-          var grupo = data.team.category.group_code;
+      $scope.twitter = "";
+      if (data.team.twitter) {
+        $scope.twitter = (data.team.twitter).substring(1);
+      }
+
+
+      var liga = data.team.category.category_id;
+      var grupo = data.team.category.group_code;
 
 
           //Para saber el id de la liga y poner el enlace de equipo en el menu
-          $http.get('../../Recursos/competicion.json').success(function (data) {
-              
 
-             $.each(data.competicion, function (i, item) {
-                
-                 if (item.liga == liga && item.grupo == grupo) {
-                     $scope.idEquipo = item.id;
-                  }
-              });
+          $.each(competicion.competicion, function (i, item) {
 
+           if (item.liga == liga && item.grupo == grupo) {
+             $scope.idEquipo = item.id;
+           }
+         });
 
-          }).error(function (data, status, headers, config) {
-              //Controlar el error
-          });
-
-
-
-
-
-
-      }).error(function (data, status, headers, config) {
+        }).error(function (data, status, headers, config) {
           //Controlar el error
-      });
+        });
 
-  }]);
+      }]);
 
 miAppControllers.controller('ControladorDetalle', ['$scope', '$routeParams', '$http', '$location', '$anchorScroll',
   function ($scope, $routeParams, $http, $location, $anchorScroll) {
 
 
-      $http.get('http://apiangularua.azurewebsites.net/jugador?id=' + $routeParams.id).success(function (data) {
+    $http.get('http://apiangularua.azurewebsites.net/jugador?id=' + $routeParams.id).success(function (data) {
 
-          $scope.id = $routeParams.id;
+      $scope.id = $routeParams.id;
 
-          calculaEstadisticasGlobales(data);
+      calculaEstadisticasGlobales(data);
 
-          $scope.jugador = data;
+      $scope.jugador = data;
 
-          $scope.twitter = "";
-          if (data.twitter) {
-              $scope.twitter = (data.twitter).substring(1);
-          }
-
-
-          $scope.goles = GolesTotales;
-          $scope.asistencias = AsistenciasTotales;
-          $scope.tarjetasamarillas = TarjetasAmarillasTotales;
-          $scope.tarjetasrojas = TarjetasRojasTotales;
-          $scope.partidosjugados = PartidosJugadosTotales;
-          $scope.partidostitular = PartidosTitularTotales;
-          $scope.minutosjugados = MinutosTotales;
+      $scope.twitter = "";
+      if (data.twitter) {
+        $scope.twitter = (data.twitter).substring(1);
+      }
 
 
-          $scope.sube = function () {
+      $scope.goles = GolesTotales;
+      $scope.asistencias = AsistenciasTotales;
+      $scope.tarjetasamarillas = TarjetasAmarillasTotales;
+      $scope.tarjetasrojas = TarjetasRojasTotales;
+      $scope.partidosjugados = PartidosJugadosTotales;
+      $scope.partidostitular = PartidosTitularTotales;
+      $scope.minutosjugados = MinutosTotales;
 
-            
-              $location.hash('contenedor');
 
-               $anchorScroll();
-          };
+      $scope.sube = function () {
 
-          angular.element(document).ready(function () {
-              !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + "://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");
-              MostrarEstadisticas();
-          });
+
+        $location.hash('contenedor');
+
+        $anchorScroll();
+      };
+
+      angular.element(document).ready(function () {
+        !function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + "://platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");
+        MostrarEstadisticas();
+      });
 
 
           //Para sacar el id de la competicion y ponerlo en el menu
@@ -137,29 +122,20 @@ miAppControllers.controller('ControladorDetalle', ['$scope', '$routeParams', '$h
           var grupo = data.statistics_resume[0].group_code;
 
 
-          //Para saber el id de la liga y poner el enlace de equipo en el menu
-          $http.get('../../Recursos/competicion.json').success(function (data) {
 
-              $.each(data.competicion, function (i, item) {
+          $.each(competicion.competicion, function (i, item) {
 
-                  if (item.liga == liga && item.grupo == grupo) {
-                      $scope.idEquipo = item.id;
-                  }
-              });
-
-
-          }).error(function (data, status, headers, config) {
-              //Controlar el error
+            if (item.liga == liga && item.grupo == grupo) {
+              $scope.idEquipo = item.id;
+            }
           });
 
 
-
-
-      }).error(function (data, status, headers, config) {
+        }).error(function (data, status, headers, config) {
           //Controlar el error
           console.log(data);
-      });
-  }]);
+        });
+      }]);
 
 
 

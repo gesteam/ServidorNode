@@ -1,4 +1,4 @@
-﻿{
+var competicion = {
   "competicion": [
     {
       "id": 1,
@@ -85,4 +85,4 @@
       "logo": "http://thumb.resfu.com/media/img/league_logos/liga_portuguesa.png??size=120x&amp;ext=png&amp;lossy=1&amp;1"
     }
     ]
-}
+};
