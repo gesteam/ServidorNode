@@ -49,6 +49,7 @@ miAppControllers.controller('ControladorLista', ['$scope', '$routeParams', '$htt
 
       $scope.id = $routeParams.id;
 
+console.log(data);
       $scope.jugadores = data;
 
       $scope.twitter = "";

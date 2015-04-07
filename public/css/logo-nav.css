@@ -207,21 +207,29 @@ tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr
 
 thead{
     background-color: white;
+    
+}
+
+thead > tr > th{
+   text-align: center;  
 }
 
 table a
 {
     display:block;
-    text-decoration:underline;;
+    text-decoration:underline;
+  
 }
 
  thead > tr > th > a
 {
     display:block;
     text-decoration:underline;
-    color:blue;
+    color:green;
+    
 }
 
  thead > tr > th > a:visited{
-    color:blue;
+    color:green;
+    
 }
