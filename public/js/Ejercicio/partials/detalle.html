@@ -1,0 +1,224 @@
+﻿<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container menu">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header menu">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div>
+                <a class="navbar-brand" href="#">
+                    <img src="images/logo2.png" height="50" alt="logo GesTeam" id="logo">
+                </a>
+            </div>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse menu" id="bs-example-navbar-collapse-1">
+
+            <ul class="nav navbar-nav">
+
+                <li class="activada">
+                    <a href="#">Competicion</a>
+                </li>
+                <li class="activada">
+                    <a href="#/liga/{{idEquipo}}">Equipo</a>
+                </li>
+                <li class="activada">
+                    <a href="#/equipo/{{jugador.team_id}}">Plantilla</a>
+                </li>
+                <li class="activada actual">
+                    <a href="#/jugador/{{id}}">Jugador</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+
+<!-- Page Content -->
+<div class="container">
+    <div class="row">
+        <h1>
+            <a href="#/equipo/{{jugador.team_id}}">
+                <img ng-src="{{jugador.team_shield}}" class="avatar" alt="avatar">
+            </a>
+            <img ng-src="{{jugador.country_flag}}" class="avatar" alt="avatar" height="40px">
+            <a ng-if='twitter != "" ' href="https://www.twitter.com/{{twitter}}" target="_blank">
+                <img src="../../../images/twitter.png" width="40" />
+
+            </a>
+
+
+            {{jugador.nick}}</h1>
+        <hr class="sombra">
+        <br>
+    </div>
+
+    <div class="row">
+        <!-- Foto -->
+    
+        <div class="col-md-2" >
+            <div class="text-center" id="imgJugador">
+                <div class="row">
+                    <img ng-src="{{jugador.player_avatar}}" class="avatar img-circle sombra" alt="avatar">
+                    <br />
+                </div>
+
+            </div>
+
+        </div>
+            
+
+        <!-- Datos Personales -->
+        <div class="col-md-5 col-md-offset-1  personal-info">
+            <div class="alert alert-info alert-dismissable" style="display: none;">
+                <a class="panel-close close" data-dismiss="alert">×</a>  <i class="fa fa-coffee"></i>
+                This is an <strong class="">.alert</strong>. Use this to show important messagesto the user.
+            </div>
+
+            <div class="col-lg-12">
+                <div class="panel panel-success sombra">
+                    <div class="panel-heading">
+                        <h2 class="panel-title text-center">Datos generales</h2>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <label class="col-xs-5 col-xs-offset-1 col-md-offset-0 col-md-5 text-right well-sm">Nombre</label>
+                            <span class="col-xs-5 col-md-6 text-left well well-sm">{{jugador.name}}</span>
+                        </div>
+                        <div class="row">
+                            <label class="col-xs-5 col-xs-offset-1 col-md-offset-0 col-md-5 text-right well-sm">Apellidos</label>
+                            <span class="col-xs-5 col-md-6 text-left well well-sm">{{jugador.last_name}}</span>
+                        </div>
+                        <div class="row">
+                            <label class="col-xs-5 col-xs-offset-1 col-md-offset-0 col-md-5 text-right well-sm">Nick</label>
+                            <span class="col-xs-5 col-md-6 text-left well well-sm">{{jugador.nick}}</span>
+                        </div>
+                        <div class="row">
+                            <label class="col-xs-5 col-xs-offset-1 col-md-offset-0 col-md-5 text-right well-sm">Edad</label>
+                            <span class="col-xs-5 col-md-6 text-left well well-sm">{{jugador.age}} años</span>
+                        </div>
+                        <div class="row">
+                            <label class="col-xs-5 col-xs-offset-1 col-md-offset-0 col-md-5 text-right well-sm">Peso</label>
+                            <span class="col-xs-5 col-md-6 text-left well well-sm">{{jugador.weight}} kg</span>
+                        </div>
+                        <div class="row">
+                            <label class="col-xs-5 col-xs-offset-1 col-md-offset-0 col-md-5 text-right well-sm">Altura</label>
+                            <span class="col-xs-5 col-md-6 text-left well well-sm">{{jugador.height}} cm</span>
+                        </div>
+
+                        <div class="row">
+                            <label class="col-xs-5 col-xs-offset-1 col-md-offset-0 col-md-5 text-right well-sm">País</label>
+                            <span class="col-xs-5 col-md-6 text-left well well-sm">{{jugador.country}}</span>
+                        </div>
+                        <div class="row">
+                            <label class="col-xs-5 col-xs-offset-1 col-md-offset-0 col-md-5 text-right well-sm">Demarcación</label>
+                            <span class="col-xs-5 col-md-6 text-left well well-sm" ng-switch="jugador.role">
+                                <span ng-switch-when="1">Portero</span>
+                                <span ng-switch-when="2">Defensa</span>
+                                <span ng-switch-when="3">Centrocampista</span>
+                                <span ng-switch-when="4">Delantero</span>
+                                <span ng-switch-default>{{jugador.role}}</span>
+                            </span>
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+
+        <!-- Estadísticas Globales -->
+        <div class="col-md-4 personal-info ">
+            <div class="alert alert-info alert-dismissable" style="display: none;">
+                <a class="panel-close close" data-dismiss="alert">×</a>  <i class="fa fa-coffee"></i>
+                This
+        is an <strong class="">.alert</strong>. Use this to show important messages
+        to the user.
+            </div>
+
+            <div class="col-lg-12">
+                <div class="panel panel-success sombra">
+                    <div class="panel-heading">
+
+                        <h2 class="panel-title text-center">Estadísticas Globales</h2>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <label class="col-xs-6 col-sm-5 col-sm-offset-1 col-md-offset-0 col-md-7  text-right well-sm">Partidos Jugados</label>
+                            <span class="col-xs-5 col-sm-5  col-md-4 text-left well well-sm">{{partidosjugados}}</span>
+                        </div>
+                        <div class="row">
+                            <label class="col-xs-6 col-sm-5 col-sm-offset-1 col-md-offset-0 col-md-7  text-right well-sm">Partidos Titular</label>
+                            <span class="col-xs-5 col-sm-5  col-md-4 text-left well well-sm">{{partidostitular}}</span>
+                        </div>
+                        <div class="row">
+                            <label class="col-xs-6 col-sm-5 col-sm-offset-1 col-md-offset-0 col-md-7  text-right well-sm">Minutos Jugados</label>
+                            <span class="col-xs-5 col-sm-5  col-md-4 text-left well well-sm">{{minutosjugados}}</span>
+                        </div>
+                        <div class="row">
+                            <label class="col-xs-6 col-sm-5 col-sm-offset-1 col-md-offset-0 col-md-7  text-right well-sm">Goles</label>
+                            <span class="col-xs-5 col-sm-5  col-md-4 text-left well well-sm">{{goles}}</span>
+                        </div>
+                        <div class="row">
+                            <label class="col-xs-6 col-sm-5 col-sm-offset-1 col-md-offset-0 col-md-7  text-right well-sm">Asistencias</label>
+                            <span class="col-xs-5 col-sm-5  col-md-4 text-left well well-sm">{{asistencias}}</span>
+                        </div>
+                        <div class="row">
+                            <label class="col-xs-6 col-sm-5 col-sm-offset-1 col-md-offset-0 col-md-7  text-right well-sm">Tarjetas Amarillas</label>
+                            <span class="col-xs-5 col-sm-5  col-md-4 text-left well well-sm">{{tarjetasamarillas}}</span>
+                        </div>
+                        <div class="row">
+                            <label class="col-xs-6 col-sm-5 col-sm-offset-1 col-md-offset-0 col-md-7  text-right well-sm">Tarjetas Rojas</label>
+                            <span class="col-xs-5 col-sm-5  col-md-4 text-left well well-sm">{{tarjetasrojas}}</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-9 col-md-offset-3 personal-info">
+            <div class="alert alert-info alert-dismissable" style="display: none;">
+                <a class="panel-close close" data-dismiss="alert">×</a>  <i class="fa fa-coffee"></i>
+                This is an <strong class="">.alert</strong>. Use this to show important messagesto the user.
+            </div>
+
+            <div class="col-lg-12">
+                <div class="panel panel-success sombra">
+                    <div class="panel-heading">
+                        <h2 class="panel-title text-center">Estadísticas por Competición</h2>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+
+                            <div id="container" src="Js/Ejercicio/graficaEstadisticas.js" style="min-width: 310px; max-width: 800px; height: 600px; margin: 0 auto">
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+
+

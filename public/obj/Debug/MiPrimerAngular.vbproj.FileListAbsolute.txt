@@ -1,0 +1,40 @@
+c:\users\eps\documents\visual studio 2012\Projects\MiPrimerAngular\MiPrimerAngular\bin\MiPrimerAngular.dll
+c:\users\eps\documents\visual studio 2012\Projects\MiPrimerAngular\MiPrimerAngular\bin\MiPrimerAngular.pdb
+c:\users\eps\documents\visual studio 2012\Projects\MiPrimerAngular\MiPrimerAngular\bin\MiPrimerAngular.xml
+c:\users\eps\documents\visual studio 2012\Projects\MiPrimerAngular\MiPrimerAngular\obj\Debug\MiPrimerAngular.Resources.resources
+c:\users\eps\documents\visual studio 2012\Projects\MiPrimerAngular\MiPrimerAngular\obj\Debug\MiPrimerAngular.vbproj.GenerateResource.Cache
+c:\users\eps\documents\visual studio 2012\Projects\MiPrimerAngular\MiPrimerAngular\obj\Debug\MiPrimerAngular.dll
+c:\users\eps\documents\visual studio 2012\Projects\MiPrimerAngular\MiPrimerAngular\obj\Debug\MiPrimerAngular.xml
+c:\users\eps\documents\visual studio 2012\Projects\MiPrimerAngular\MiPrimerAngular\obj\Debug\MiPrimerAngular.pdb
+C:\Users\EPS\Desktop\Angular\MiPrimerAngular\bin\MiPrimerAngular.dll
+C:\Users\EPS\Desktop\Angular\MiPrimerAngular\bin\MiPrimerAngular.pdb
+C:\Users\EPS\Desktop\Angular\MiPrimerAngular\bin\MiPrimerAngular.xml
+C:\Users\EPS\Desktop\Angular\MiPrimerAngular\obj\Debug\MiPrimerAngular.Resources.resources
+C:\Users\EPS\Desktop\Angular\MiPrimerAngular\obj\Debug\MiPrimerAngular.vbproj.GenerateResource.Cache
+C:\Users\EPS\Desktop\Angular\MiPrimerAngular\obj\Debug\MiPrimerAngular.dll
+C:\Users\EPS\Desktop\Angular\MiPrimerAngular\obj\Debug\MiPrimerAngular.xml
+C:\Users\EPS\Desktop\Angular\MiPrimerAngular\obj\Debug\MiPrimerAngular.pdb
+C:\Users\Usuario\Desktop\Angular\Angular\MiPrimerAngular\bin\MiPrimerAngular.dll
+C:\Users\Usuario\Desktop\Angular\Angular\MiPrimerAngular\bin\MiPrimerAngular.pdb
+C:\Users\Usuario\Desktop\Angular\Angular\MiPrimerAngular\bin\MiPrimerAngular.xml
+C:\Users\Usuario\Desktop\Angular\Angular\MiPrimerAngular\obj\Debug\MiPrimerAngular.Resources.resources
+C:\Users\Usuario\Desktop\Angular\Angular\MiPrimerAngular\obj\Debug\MiPrimerAngular.vbproj.GenerateResource.Cache
+C:\Users\Usuario\Desktop\Angular\Angular\MiPrimerAngular\obj\Debug\MiPrimerAngular.dll
+C:\Users\Usuario\Desktop\Angular\Angular\MiPrimerAngular\obj\Debug\MiPrimerAngular.xml
+C:\Users\Usuario\Desktop\Angular\Angular\MiPrimerAngular\obj\Debug\MiPrimerAngular.pdb
+C:\Users\Pablo\Desktop\formateo\ANGULARRRR\Angular\Angular\MiPrimerAngular\bin\MiPrimerAngular.dll
+C:\Users\Pablo\Desktop\formateo\ANGULARRRR\Angular\Angular\MiPrimerAngular\bin\MiPrimerAngular.pdb
+C:\Users\Pablo\Desktop\formateo\ANGULARRRR\Angular\Angular\MiPrimerAngular\bin\MiPrimerAngular.xml
+C:\Users\Pablo\Desktop\formateo\ANGULARRRR\Angular\Angular\MiPrimerAngular\obj\Debug\MiPrimerAngular.Resources.resources
+C:\Users\Pablo\Desktop\formateo\ANGULARRRR\Angular\Angular\MiPrimerAngular\obj\Debug\MiPrimerAngular.vbproj.GenerateResource.Cache
+C:\Users\Pablo\Desktop\formateo\ANGULARRRR\Angular\Angular\MiPrimerAngular\obj\Debug\MiPrimerAngular.dll
+C:\Users\Pablo\Desktop\formateo\ANGULARRRR\Angular\Angular\MiPrimerAngular\obj\Debug\MiPrimerAngular.xml
+C:\Users\Pablo\Desktop\formateo\ANGULARRRR\Angular\Angular\MiPrimerAngular\obj\Debug\MiPrimerAngular.pdb
+C:\Users\Pablo\Desktop\formateo\ANGULARRRR\Angular\Angular 07-04\MiPrimerAngular\bin\MiPrimerAngular.dll
+C:\Users\Pablo\Desktop\formateo\ANGULARRRR\Angular\Angular 07-04\MiPrimerAngular\bin\MiPrimerAngular.pdb
+C:\Users\Pablo\Desktop\formateo\ANGULARRRR\Angular\Angular 07-04\MiPrimerAngular\bin\MiPrimerAngular.xml
+C:\Users\Pablo\Desktop\formateo\ANGULARRRR\Angular\Angular 07-04\MiPrimerAngular\obj\Debug\MiPrimerAngular.Resources.resources
+C:\Users\Pablo\Desktop\formateo\ANGULARRRR\Angular\Angular 07-04\MiPrimerAngular\obj\Debug\MiPrimerAngular.vbproj.GenerateResource.Cache
+C:\Users\Pablo\Desktop\formateo\ANGULARRRR\Angular\Angular 07-04\MiPrimerAngular\obj\Debug\MiPrimerAngular.dll
+C:\Users\Pablo\Desktop\formateo\ANGULARRRR\Angular\Angular 07-04\MiPrimerAngular\obj\Debug\MiPrimerAngular.xml
+C:\Users\Pablo\Desktop\formateo\ANGULARRRR\Angular\Angular 07-04\MiPrimerAngular\obj\Debug\MiPrimerAngular.pdb

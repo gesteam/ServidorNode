@@ -1,0 +1,147 @@
+﻿<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container menu">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header menu">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="col-xs-offset-4">
+                <a class="navbar-brand" href="#">
+                    <img src="images/logo2.png" height="50" alt="logo GesTeam" id="logo">
+                </a>
+            </div>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse menu" id="bs-example-navbar-collapse-1">
+           <ul class="nav navbar-nav">
+
+            <li class="activada">
+                <a href="#">Competicion</a>
+            </li>
+            <li class="activada">
+                <a href="#/liga/{{idEquipo}}">Equipo</a>
+            </li>
+            <li class="activada actual">
+                <a href="#/equipo/{{id}}">Plantilla</a>
+            </li>
+            <li class="desactivada">
+                <a>Jugador</a>
+            </li>
+        </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+</div>
+<!-- /.container -->
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+
+
+    <div class="row">
+        <h1>
+            <a href="{{jugadores.team.website}}" target="_blank">
+                <img ng-src="{{jugadores.team.shield}}" class="avatar" alt="avatar" height="40px"/>
+            </a>
+            <a ng-if='twitter != "" ' href="https://www.twitter.com/{{jugadores.team.twitter}}" target="_blank">
+                <img src="../../../images/twitter.png" width="40" />
+            </a>
+            {{jugadores.team.fullName}} 
+        </h1>
+
+        <hr class="sombra">
+        <br>
+    </div>
+    <div class="row busqueda">
+      <div class="col-md-4">
+
+        <div class="row">
+            <p class="label label-success col-xs-12">
+                Buscar:
+            </p>
+        </div>
+        <div class="row">
+            <input size="50" class="form-control" placeholder="Introduce criterio de busqueda" type="text" ng-model="busqueda">
+        </div>
+
+    </div>
+
+    <div class="col-md-3 col-md-offset-1">
+        <div class="row">
+            <p class="label label-default col-xs-12">
+                Ordenar por: 
+            </p>
+        </div>
+        <div class="row">
+            <select class="form-control col-xs-12" ng-model="ordenarPor" >
+                <option value="nick" selected>Nombre</option>
+                <option value="squadNumber">Número</option>
+                <option value="role">Posición</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="col-md-3 col-md-offset-1">
+        <div class="row">
+            <p class="label label-default col-xs-12">
+                Orden:
+            </p>
+        </div>
+        <div class="row">
+            <select class="form-control" ng-model="orden">
+                <option value="false" selected>Ascendente</option>
+                <option value="true">Descendente</option>
+            </select>
+        </div>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-xs-12 padding-left-0">
+
+        <table class="table table-bordered table-striped table-condensed tablaJugadores">
+            <thead>
+                <tr>
+                    <th class="col-xs-1">Foto</th>
+                    <th class="col-xs-1">Número</th>
+                    <th class="col-xs-4">Nombre</th>
+                    <th class="col-xs-2">Posicion</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="jug in jugadores.team.squad | filter: busqueda | orderBy:ordenarPor:orden">
+                    <td><a href="#/jugador/{{jug.id}}">
+                        <img ng-src="{{jug.image}}"></a></td>
+                        <td><a href="#/jugador/{{jug.id}}">{{jug.squadNumber}}</a></td>
+                        <td><a href="#/jugador/{{jug.id}}">{{jug.nick}}</a></td>
+
+                        <td ng-switch="{{jug.role}}">
+                            <span ng-switch-when="1">Portero</span>
+                            <span ng-switch-when="2">Defensa</span>
+                            <span ng-switch-when="3">Centrocampista</span>
+                            <span ng-switch-when="4">Delantero</span>
+
+                        </td>
+
+
+                    </tr>
+
+                </tbody>
+            </table>
+
+
+        </div>
+    </div>
+</div>
+<!-- /.container -->
+
+<!-- jQuery -->
+<script src="js/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>

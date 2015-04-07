@@ -1,0 +1,212 @@
+
+body {
+    padding-top: 70px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
+}
+
+
+
+@media(min-width:768px) {
+    body;
+
+    {
+        padding-top: 100px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
+    }
+
+    .navbar-fixed-top .navbar-brand {
+        padding: 15px 0;
+    }
+
+}
+
+
+
+.navbar-brand{
+    width: 0px;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: white;
+}
+
+.navbar .navbar-nav {
+    display: inline-block;
+    float: center;
+    vertical-align: top;
+}
+
+.navbar .navbar-collapse {
+    text-align: center;
+    margin-right: 25px;
+}
+
+
+#contenedorEquipos {
+    margin-top: 30px;
+    float: left;
+    vertical-align: center;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flex;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+
+.equipo {
+    text-align: center;
+    border-radius: 20px;
+    margin: 15px;
+    box-shadow: rgb(000,000,000) 5px 5px 10px;
+    height: 170px;
+    width: 170px;
+    text-align: center;
+    padding: 15px;
+    background-color: white;
+    border: 1px solid #000;
+}
+
+.equipo:hover {
+    box-shadow: rgb(22, 81, 11) 10px 10px 10px;
+}
+
+
+body {
+    background-color: #dbdbdb;
+}
+
+/* unvisited link */
+a:link {
+    color: inherit;
+    text-decoration: inherit;
+    background-color: inherit;
+}
+
+/* visited link */
+a:visited {
+    color: inherit;
+    text-decoration: inherit;
+    background-color: inherit;
+}
+
+/* mouse over link */
+a:hover {
+    color: inherit;
+    text-decoration: inherit;
+    background-color: inherit;
+}
+
+/* selected link */
+a:active {
+    color: inherit;
+    text-decoration: inherit;
+    background-color: inherit;
+}
+
+.nombreEquipo {
+    font-weight: bold;
+    text-decoration: underline;
+    margin-top: 5px;
+    margin-bottom: 1px;
+}
+
+
+.puntos {
+    margin-bottom: 2px;
+}
+
+
+#logo {
+    margin-right: 100px;
+}
+
+#logo:hover {
+    transform: scale(2,2);
+}
+
+.competi {
+    margin-top: 20px;
+}
+
+.actual {
+    background-color: mediumseagreen;
+}
+
+.desactivada {
+    background-color: #1E4D05;
+}
+
+li.activada:hover {
+    background-color: #7ee283;
+}
+
+
+.panel-success > .panel-heading {
+    background-color: #0B610B;
+    color: white;
+    box-shadow: rgb(000,000,000) 0px 5px 10px;
+}
+
+.sombra {
+    box-shadow: rgb(000,000,000) 5px 5px 10px;
+}
+
+hr {
+    color: #0B610B;
+    height: 3px;
+}
+
+#imgJugador {
+  margin-bottom: 30px;
+
+}
+
+
+@media screen and (min-width: 992px) {
+
+ #imgJugador {
+    position: fixed;
+
+
+}
+}
+
+.mitabla{
+
+    margin:0 auto;
+
+}
+
+.tablaJugadores{
+    text-align: center;
+}
+
+tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td{
+    vertical-align: middle;
+}
+.padding-left-0{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.busqueda{
+    margin-bottom: 30px;
+}
+
+.table-striped > tbody > tr:nth-child(2n+1) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
+   background-color: #A8D6A7;
+}
+
+.table-striped > tbody > tr:nth-child(2n) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
+   background-color: white;
+}
+
+thead{
+    background-color: white;
+}
+
+
