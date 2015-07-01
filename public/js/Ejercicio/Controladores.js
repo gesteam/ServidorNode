@@ -4,15 +4,15 @@
 
 miAppControllers.controller('ControladorCompeticion', function ($scope, $http) {
 
-
   $scope.competicion = competicion;
+  $("#cargando").hide();
+
 });
 
 //LIGA
 
 miAppControllers.controller('ControladorLiga', ['$scope', '$routeParams', '$http',
   function ($scope, $routeParams, $http) {
-
 
 
     var liga;
@@ -33,6 +33,7 @@ miAppControllers.controller('ControladorLiga', ['$scope', '$routeParams', '$http
 
     $http.get('http://apiangularua.azurewebsites.net/liga?liga=' + liga + '&grupo=' + grupo).success(function (data) {
       $scope.liga = data;
+      $("#cargando").hide();
     }).error(function (data, status, headers, config) {
               //Controlar el error
             });
@@ -71,7 +72,7 @@ console.log(data);
              $scope.idEquipo = item.id;
            }
          });
-
+        $("#cargando").hide();
         }).error(function (data, status, headers, config) {
           //Controlar el error
         });
@@ -134,7 +135,7 @@ miAppControllers.controller('ControladorDetalle', ['$scope', '$routeParams', '$h
             }
           });
 
-
+        v$("#cargando").hide();
         }).error(function (data, status, headers, config) {
           //Controlar el error
           console.log(data);

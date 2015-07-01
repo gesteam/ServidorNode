@@ -4215,10 +4215,13 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   line-height: 20px;
 }
 @media (max-width: 767px) {
+  .navbar-nav{
+      width: 100%;
+  }
   .navbar-nav .open .dropdown-menu {
     position: static;
     float: none;
-    width: auto;
+    width: 100%;
     margin-top: 0;
     background-color: transparent;
     border: 0;
@@ -4239,7 +4242,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 @media (min-width: 768px) {
   .navbar-nav {
-    float: left;
+    float: none;
     margin: 0;
   }
   .navbar-nav > li {
