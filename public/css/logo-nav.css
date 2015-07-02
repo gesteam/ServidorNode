@@ -195,6 +195,20 @@ margin: 0 auto;
   text-align: center;
 
 }
+
+.equipo{
+  width: 120px;
+  height: 120px;
+}
+
+.equipo img{
+ width: 70px;
+}
+
+.nombreEquipo {
+  margin-top: 1px;
+ font-size: smaller;
+}
 }
 
 
