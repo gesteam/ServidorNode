@@ -135,7 +135,7 @@ miAppControllers.controller('ControladorDetalle', ['$scope', '$routeParams', '$h
             }
           });
 
-        v$("#cargando").hide();
+        $("#cargando").hide();
         }).error(function (data, status, headers, config) {
           //Controlar el error
           console.log(data);
