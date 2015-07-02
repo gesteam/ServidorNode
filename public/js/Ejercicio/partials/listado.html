@@ -48,13 +48,15 @@
     </div>
     <div class="row">
         <h1>
+            <span  class="centradoPequeno">
             <a href="{{jugadores.team.website}}" target="_blank">
                 <img ng-src="{{jugadores.team.shield}}" class="avatar" alt="avatar" height="40px"/>
             </a>
             <a ng-if='twitter != ""' href="https://www.twitter.com/{{twitter}}" target="_blank">
                 <img src="../../../images/twitter.png" width="40" />
             </a>
-            <span>
+            </span>
+            <span id="lineaNueva">
             {{jugadores.team.fullName}} 
             </span>
         </h1>

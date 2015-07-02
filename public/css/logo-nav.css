@@ -171,7 +171,6 @@ hr {
  #imgJugador {
     position: fixed;
 
-
 }
 
 
@@ -184,6 +183,17 @@ hr {
 width: 95%;
 }
 
+#lineaNueva{
+  display: inherit;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.centradoPequeno{
+  display: block;
+  text-align: center;
+
+}
 }
 
 

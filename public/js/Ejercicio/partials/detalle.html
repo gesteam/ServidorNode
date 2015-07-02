@@ -49,6 +49,7 @@
     </div>
     <div class="row">
         <h1>
+        <span  class="centradoPequeno">
             <a href="#/equipo/{{jugador.team_id}}">
                 <img ng-src="{{jugador.team_shield}}" class="avatar" alt="avatar">
             </a>
@@ -57,9 +58,12 @@
                 <img src="../../../images/twitter.png" width="40" />
 
             </a>
+    </span>
+            <span id="lineaNueva">
+           {{jugador.nick}}
+            </span>
 
-
-            {{jugador.nick}}</h1>
+            </h1>
         <hr class="sombra">
         <br>
     </div>
