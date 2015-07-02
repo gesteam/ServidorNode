@@ -209,6 +209,10 @@ margin: 0 auto;
   margin-top: 1px;
  font-size: smaller;
 }
+.puntos {
+  margin-top: -1px;
+ font-size: smaller;
+}
 }
 
 
