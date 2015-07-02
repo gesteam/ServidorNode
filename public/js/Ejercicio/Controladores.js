@@ -86,7 +86,7 @@ miAppControllers.controller('ControladorDetalle', ['$scope', '$routeParams', '$h
 
 
     $http.get('http://apiangularua.azurewebsites.net/jugador?id=' + $routeParams.id).success(function (data) {
-
+      $("#cargando").hide();
       $scope.id = $routeParams.id;
 
       calculaEstadisticasGlobales(data);
@@ -135,7 +135,7 @@ miAppControllers.controller('ControladorDetalle', ['$scope', '$routeParams', '$h
             }
           });
 
-        $("#cargando").hide();
+        
         }).error(function (data, status, headers, config) {
           //Controlar el error
           console.log(data);
