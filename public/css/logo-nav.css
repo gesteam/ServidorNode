@@ -173,7 +173,20 @@ hr {
 
 
 }
+
+
 }
+
+
+@media only screen and (max-width:768px) {
+
+#contenedorAngular{
+width: 95%;
+}
+
+}
+
+
 
 .mitabla{
 
